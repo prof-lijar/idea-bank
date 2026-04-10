@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Geist, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
-import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
+import { APP_DESCRIPTION, BRAND_MARK } from "@/lib/constants";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +20,10 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: APP_NAME,
+  title: {
+    default: BRAND_MARK,
+    template: `%s · ${BRAND_MARK}`,
+  },
   description: APP_DESCRIPTION,
 };
 

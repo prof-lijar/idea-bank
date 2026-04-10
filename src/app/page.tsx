@@ -1,13 +1,17 @@
 import Link from "next/link";
-import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
+import { BrandMark } from "@/components/brand-mark";
+import { APP_DESCRIPTION, BRAND_LINE } from "@/lib/constants";
 
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col items-center justify-center px-6 py-16 text-center">
-      <h1 className="font-serif text-3xl font-normal tracking-[-0.02em] text-foreground sm:text-4xl">
-        {APP_NAME}
+      <h1 className="font-normal text-foreground">
+        <BrandMark size="hero" />
       </h1>
-      <p className="mt-4 max-w-md text-[15px] leading-relaxed text-foreground/65">
+      <p className="mt-3 max-w-lg font-mono text-[11px] leading-relaxed tracking-[0.06em] text-foreground/50 sm:text-[12px]">
+        {BRAND_LINE}
+      </p>
+      <p className="mt-6 max-w-md font-serif text-[17px] leading-relaxed text-foreground/70 sm:text-lg">
         {APP_DESCRIPTION}
       </p>
       <Link

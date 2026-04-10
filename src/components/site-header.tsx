@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { APP_NAME } from "@/lib/constants";
+import { BrandMark } from "@/components/brand-mark";
 
 export function SiteHeader() {
   return (
@@ -7,9 +7,9 @@ export function SiteHeader() {
       <div className="mx-auto flex h-14 max-w-3xl items-center justify-between gap-4 px-5 sm:px-6">
         <Link
           href="/"
-          className="text-[15px] font-medium tracking-tight text-foreground transition-opacity hover:opacity-70"
+          className="text-foreground transition-opacity hover:opacity-70"
         >
-          {APP_NAME}
+          <BrandMark />
         </Link>
         <nav className="flex items-center gap-5 text-[13px]">
           <Link

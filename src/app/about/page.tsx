@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { APP_NAME } from "@/lib/constants";
+import { BrandMark } from "@/components/brand-mark";
+import { BRAND_LINE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `About · ${APP_NAME}`,
+  title: "About",
   description:
     "What Idea Bank is: problems, solutions, executions—and why ideas are the edge we have.",
 };
@@ -23,9 +24,14 @@ export default function AboutPage() {
         <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-foreground/45">
           About this project
         </p>
-        <h1 className="mt-4 font-serif text-[2rem] font-normal leading-[1.15] tracking-[-0.02em] text-foreground sm:text-[2.25rem]">
-          {APP_NAME}
-        </h1>
+        <div className="mt-4 space-y-2">
+          <h1 className="font-normal leading-none text-foreground">
+            <BrandMark size="hero" />
+          </h1>
+          <p className="font-mono text-[11px] leading-relaxed tracking-[0.08em] text-foreground/45 sm:text-[12px]">
+            {BRAND_LINE}
+          </p>
+        </div>
 
         <div className="mt-10 space-y-8 text-[15px] leading-relaxed text-foreground/85">
           <section className="space-y-3">
